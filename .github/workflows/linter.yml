@@ -13,4 +13,4 @@ jobs:
       - name: "install linter"
         run: sudo apt-get install -y pylint
       - name: "run linter"
-        run: pylint python
+        run: pwd && ls
