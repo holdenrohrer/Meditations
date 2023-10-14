@@ -1,0 +1,16 @@
+name: Lint
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint:
+    runs-on: macos-latest
+    steps:
+      - name: "install linter"
+        run: pip install pylint
+      - name: "run linter"
+        run: pylint ../../Python
