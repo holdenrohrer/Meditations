@@ -11,6 +11,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: "install linter"
-        run: pip install pylint
+        run: sudo apt-get install -y pylint
       - name: "run linter"
         run: pylint ../../Python
