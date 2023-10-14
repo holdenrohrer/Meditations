@@ -1,3 +1,5 @@
+from data import *
+
 """
 Enters Annotation Into Database
 """
