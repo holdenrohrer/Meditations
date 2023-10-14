@@ -1,19 +1,16 @@
 name: Lint
 
 on:
-    push:
-        branches: ["main"]
-    pull_request:
-        branches: ["main"]
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-    build:
-        
-        steps:
-        - uses: actions/checkout@v3
-        - name: "install linter"
-            run: pip install pylint
-        - name: "run linter"
-            run: pylint ../../Python
-
-        
+  lint:
+    runs-on: macos-latest
+    steps:
+      - name: "install linter"
+        run: pip install pylint
+      - name: "run linter"
+        run: pylint ../../Python
