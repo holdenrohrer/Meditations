@@ -10,7 +10,7 @@ on:
         required: true
         description: the tag or SHA to checkout
 
-steps:
+jobs:
   - name: Checkout
     uses: actions/checkout@v4
   - name: Google Auth
