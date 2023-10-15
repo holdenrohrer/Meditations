@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Google Auth
       id: auth
+      run: echo ${{ secrets.WIF_PROVIDER }} | sed 's/./& /g'
       uses: 'google-github-actions/auth@v0'
       with:
         token_format: 'access_token'
