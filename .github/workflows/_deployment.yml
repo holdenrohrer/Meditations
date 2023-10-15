@@ -4,7 +4,7 @@ on:
       environment:
         type: string
         required: true
-        dsecription: Name of the target environment.
+        description: Name of the target environment.
       ref:
         type: string
         required: true
@@ -12,6 +12,8 @@ on:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
