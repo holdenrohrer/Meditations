@@ -1,0 +1,19 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: "cloud deploy"
+    if: ${{ github.ref == 'refs/heads/main' }}
+    uses: ./.github/workflows/_deployment.yml
+    permissions:
+      id-token: write
+      contents: read
+    with:
+      environment: prod
+      ref: ${{ github.sha }}
+    secrets: inherit
