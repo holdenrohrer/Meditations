@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name api.getmeditations.tech;
+    location / {
+        gzip off;
+        include uwsgi_params;
+        uwsgi_modifier1 0;
+        uwsgi_pass unix:/run/uwsgi/uwsgi.sock;
+    }
+}

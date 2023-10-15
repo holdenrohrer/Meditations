@@ -11,3 +11,5 @@ build/
 *.mode2v3
 xcuserdata
 
+__pycache__
+env
